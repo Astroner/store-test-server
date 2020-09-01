@@ -10,11 +10,17 @@ module.exports = [
         1000000
     ),
     new Merch(
+        "Anal",
+        "Glory hole",
+        cats.get("SEX").id,
+        9999999
+    ),
+    new Merch(
         "Fisting",
         "Da best maaa-ass-age",
         cats.get("SEX").id,
         300
-    ), ,
+    ),
     new Merch(
         "T-shirt",
         "Sad unhanded shirt",

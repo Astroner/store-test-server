@@ -21,7 +21,7 @@ app.get("/merchandise/", (req, res) => {
 
 app.get("/merchandise/:id", (req, res) => {
     const tempo = merch.find(d => d.id + "" === req.params.id)
-    if (!tempo) res.sendStatus(404)
+    if (!tempo) return res.sendStatus(404)
     else res.json(tempo)
 })
 
@@ -31,7 +31,7 @@ app.get("/categories/", (req, res) => {
 
 app.get("/categories/:id", (req, res) => {
     const tempo = asArray.find(d => d.id + "" === req.params.id)
-    if (!tempo) res.sendStatus(404)
+    if (!tempo) return res.sendStatus(404)
     else res.json(tempo)
 })
 
