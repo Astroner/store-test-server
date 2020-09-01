@@ -33,7 +33,7 @@ query params:
     }
   ```
 
-#### GET /category/ 
+#### GET /categories/ 
  returns
  ```typescript
  type Response = Array<{
@@ -43,7 +43,7 @@ query params:
  }>
 ```
 
-#### GET /category/{id}
+#### GET /categories/{id}
  returns
  ```typescript
  type Response = {
