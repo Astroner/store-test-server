@@ -11,10 +11,11 @@
  returns
  ```typescript
  type Response = Array<{
-     name: string
-     description: string
-     category: ID
-     price: number
+    id: ID
+    name: string
+    description: string
+    category: ID
+    price: number
  }>
  ```
 query params:
@@ -23,12 +24,12 @@ query params:
 #### GET /merchandise/{id}/
   returns
   ```typescript
-    {
-        id: ID
-        name: string
-        description: string
-        category: ID
-        price: number
+    type Return = {
+      id: ID
+      name: string
+      description: string
+      category: ID
+      price: number
     }
   ```
 
