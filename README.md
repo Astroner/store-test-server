@@ -20,6 +20,7 @@
  ```
 query params:
  - category - applies category filter (type: number)
+ - search - applies name filter (type: string)
    
 #### GET /merchandise/{id}/
   returns

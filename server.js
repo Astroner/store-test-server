@@ -12,11 +12,15 @@ app.use(cors())
 app.use(json())
 
 app.get("/merchandise/", (req, res) => {
+    let result = merch;
     if (req.query.category) {
-        res.json(merch.filter(item => item.category+"" === req.query.category))
-        return
+        result = merch.filter(item => item.category+"" === req.query.category)
     }
-    res.json(merch)
+    if(req.query.search) {
+        const filter = req.query.search.toLocaleLowerCase().trim();
+        result = merch.filter(item => item.name.indexOf(filter) !== -1)
+    }
+    res.json(result)
 })
 
 app.get("/merchandise/:id", (req, res) => {
