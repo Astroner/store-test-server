@@ -14,11 +14,11 @@ app.use(json())
 app.get("/merchandise/", (req, res) => {
     let result = merch;
     if (req.query.category) {
-        result = merch.filter(item => item.category+"" === req.query.category)
+        result = result.filter(item => item.category+"" === req.query.category)
     }
     if(req.query.search) {
         const filter = req.query.search.toLocaleLowerCase().trim();
-        result = merch.filter(item => item.name.indexOf(filter) !== -1)
+        result = result.filter(item => item.name.indexOf(filter) !== -1)
     }
     res.json(result)
 })
