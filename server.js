@@ -17,8 +17,10 @@ app.get("/merchandise/", (req, res) => {
         result = result.filter(item => item.category+"" === req.query.category)
     }
     if(req.query.search) {
-        const filter = req.query.search.toLocaleLowerCase().trim();
-        result = result.filter(item => item.name.indexOf(filter) !== -1)
+        const filter = req.query.search.toLowerCase().trim();
+        result = result.filter(item => {
+            return item.name.toLowerCase().search(filter) !== -1
+        })
     }
     res.json(result)
 })
